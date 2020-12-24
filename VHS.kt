@@ -2,11 +2,11 @@ class VHS (var codIMDB : Int, var titulo : String, var año : Int, var subtitulo
 
     var estadoUso : Boolean = false
 
-    override fun usado() {
-        if (estadoUso.equals(true)) {
-            println("En uso dentro del videoclub!")
+    override fun usado() :String {
+        return if (estadoUso) {
+            "En uso dentro del videoclub."
         } else {
-            println("En el almacén del videoclub!")
+            "En el almacén del videoclub."
         }
     }
 
@@ -18,15 +18,6 @@ class VHS (var codIMDB : Int, var titulo : String, var año : Int, var subtitulo
     fun guardar() {
         estadoUso = false
         println("El VHS de la película $titulo se guardará en el almacén del videoclub..")
-    }
-
-    fun getEstado() :String {
-        return if (estadoUso) {
-            "En uso dentro del videoclub."
-        } else {
-            "En el almacén del videoclub."
-        }
-
     }
 
 }

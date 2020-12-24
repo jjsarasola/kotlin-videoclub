@@ -6,6 +6,7 @@ interface Accion {
     }
     fun prestado() { /* Solo DVS, Blueray y Consola  */
     }
-    fun usado() { /* Solo VHS */
+    fun usado() :String { /* Solo VHS */
+        return "Esta funcion es solo para VHS"
     }
 }
